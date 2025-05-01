@@ -1,0 +1,72 @@
+<% layout("layouts/boilerplatecode.ejs") %>
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <h1>Create a new Listing</h1>
+        <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="listing[title]" placeholder="Enter the Title" class="form-control" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="listing[description]" placeholder="Enter the description" class="form-control" required></textarea>
+            </div>
+           
+            <a class="btn btn-transparent dropdown-toggle form-control" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-align: start;">
+                Select a Category
+              </a>
+
+            <ul class="dropdown-menu">
+            <% const categories = ["mountain", "pools", "rooms", "farms", "iconic cities"]; %>
+            <% for (const cat of categories) { %>
+             <li><a class="dropdown-item" href="#" onclick="selectCategory('<%= cat %>')"><%= cat %></a></li>
+        <% } %>
+        </ul>
+
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload Listing Image</label>
+                <input type="file" name="image" placeholder="Enter the image URL/Link" class="form-control">
+                <div class="invalid-feedback">
+                    Please provide a valid image url.
+                  </div>
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input  name="listing[price]" placeholder="Enter the price" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid price.
+                      </div>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="listing[location]" placeholder="Enter the location" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid location.
+                      </div>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" name="listing[country]" placeholder="Enter the country" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid country.
+                      </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+</div>
+<script>
+    function selectCategory(category) {
+      document.getElementById("categoryInput").value = category;
+      document.querySelector(".dropdown-toggle").textContent = category;
+    }
+  </script>

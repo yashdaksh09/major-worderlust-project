@@ -1,0 +1,30 @@
+<% layout("layouts/boilerplatecode") %>
+
+<div class="row mt-3">
+    <h1 class="col-6 offset-3" style="color: #fe424d;">Login</h1>
+    <div class="col-8 offset-3">
+        <form action="/login" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" placeholder="Enter the username" class="form-control" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">Password</label>
+                </div>
+                <div class="col-auto">
+                  <input type="password" id="inputPassword6" name="password" class="form-control" aria-describedby="passwordHelpInline" required>
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Must be 8-20 characters long.
+                  </span>
+                </div>
+              </div>
+              <button class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>

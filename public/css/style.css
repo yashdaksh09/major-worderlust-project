@@ -1,0 +1,132 @@
+body{
+        font-family: "Plus Jakarta Sans", serif !important;
+        font-optical-sizing: auto !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+}
+
+/* Nav-Bar */
+.navbar{
+    height: 4.5rem;
+    background-color: white;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2.5rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+
+/* footer */
+
+.footer-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.footer-info-links a:hover{
+    text-decoration: underline;
+}
+
+
+.footer-info-socials i{
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.footer-info-links, .footer-info-socials, .footer-info-brand{
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+.footer-info{
+    text-align: center;
+    height: 6rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* Cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+
+.listings-link{
+    text-decoration: none ;
+}
+
+/* Card Effect */
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* New button */
+.btn-primary{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Edit Button */
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Show Page */
+.delete-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+.btns{
+    display: flex;
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* login button */
+.btn-primary a{
+    text-decoration: none;
+    color: #ebebeb;
+}
+
+/* signup button */
+
+.btn-outline-danger a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Map Box Styling */
+#map { 
+    height: 400px;
+    width: 80vh;
+}
